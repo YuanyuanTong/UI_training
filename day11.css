@@ -1,0 +1,71 @@
+/* 3. :active */
+a:active {
+    background-color: yellow;
+}
+
+/* 4. ::after */
+div::after {
+    content: "This is div::after";
+}
+
+/* 5. ::before */
+div::before {
+    content: "This is div::before";
+}
+
+/* 6. :first-child */
+p:first-child {
+    background-color: pink;
+}
+
+/* 7. ::first-letter */
+p::first-letter {
+    font-size: 200%;
+}
+
+/* 8. ::first-line */
+p::first-line {
+    text-decoration: underline;
+}
+
+/* 9. :hover */
+a:hover {
+    color: green;
+}
+
+/* 10. :focus */
+input:focus{
+    background-color: yellowgreen;
+}
+
+/* 11. :nth-child, this also solves the 15th question */
+p:nth-child(even) {
+    color: purple;
+}
+
+
+/* 12. :nth-last-child(n), here is some kind of combination, cool! */
+p:nth-last-child(2)::first-line {
+    background-color: plum;
+}
+
+/* 13. :nth-of-type(n) */
+p:nth-of-type(3) {
+    font-weight: bolder;
+}
+
+/* 14. :required */
+input:required {
+    background-color: yellow;
+}
+
+/* A pseudo-class is used to define a special state of an element.
+The syntax is -- selector:pseudo-class
+My personal way to understand it is like " <something> that is of <pseudo-class>
+For example, we can interpret input:focus as those <input> elements that are being focused.
+We can interpret p:nth-child() as those <p> elements that are the n-th children of their parents
+
+A CSS pseudo-element is used to style specified parts of an element.
+The syntax is -- selector::pseudo-element
+For example, div::after means the ending part of a <div> element.
+*/

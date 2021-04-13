@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="./day11.html" onclick="newWindow()">Google</a>
+</body>
+<script>
+
+
+    // This would happen whenever closing the window, leaving the window, or refreshing.
+    // But what to do with only when closing the tab? ...
+    window.addEventListener("beforeunload", function(event) {
+        event.returnValue = "Something";
+    });
+</script>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - Day 11</title>
+    <link rel="stylesheet" href="day11.css">
+</head>
+
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet. Trying hard to populate the field to make it longer. With a longer paragraph I would be able to see the effect of the first-line elector. No it is still not long enough. Type type type. Let's have a look at it. Okay. Stop here maybe.</p>
+	    <p>Lorem ipsum dolor sit amet. Trying hard to populate the field to make it longer. With a longer paragraph I would be able to see the effect of the first-line elector. No it is still not long enough. Type type type. Let's have a look at it. Okay. Stop here maybe.</p>
+	    <p>Lorem ipsum dolor sit amet. Trying hard to populate the field to make it longer. With a longer paragraph I would be able to see the effect of the first-line elector. No it is still not long enough. Type type type. Let's have a look at it. Okay. Stop here maybe.</p>
+	    <p>Lorem ipsum dolor sit amet. Trying hard to populate the field to make it longer. With a longer paragraph I would be able to see the effect of the first-line elector. No it is still not long enough. Type type type. Let's have a look at it. Okay. Stop here maybe.</p>
+        <p>Lorem ipsum dolor sit amet. Trying hard to populate the field to make it longer. With a longer paragraph I would be able to see the effect of the first-line elector. No it is still not long enough. Type type type. Let's have a look at it. Okay. Stop here maybe.</p>
+        <p>Lorem ipsum dolor sit amet. Trying hard to populate the field to make it longer. With a longer paragraph I would be able to see the effect of the first-line elector. No it is still not long enough. Type type type. Let's have a look at it. Okay. Stop here maybe.</p>
+
+    </div>
+
+    <div>
+        <p>Try again.</p>
+        <p>Try again.</p>
+        <p>Try again.</p>
+        <p>Try again.</p>
+        <p>Try again.</p>
+    </div>
+
+    <div>
+        <a href="" onclick="newWindow()">Google.com</a>
+        <form>
+            <input type="text" name="test_focus" placeholder="Try focus this box.">
+            <input type="text" name="test_focus" required placeholder="Required field">
+        </form>
+    </div> 
+
+    <script>
+        // question 2: Confirm dialog for tab or browser close.
+        // this is the best I can do, but sometimes it is not working with other confirm() functions?
+        window.addEventListener("beforeunload", function (event) {
+            event.returnValue = "what should I do here?";
+        });
+
+        // question 1: open the link in a new window in <a> tag.
+        function newWindow() {
+            // I searched online. It says that normally the target="_blank" might open a new window OR a new tab.
+            // This is depending on the browser settings, so developer might cannot decide which one is performed.
+            // However, to force a new window, we might use the window.open() method to popup a specified size.
+            // This works with my browser(Edge) at least.
+            window.open('https://www.google.com/', 'new_window', 'width=800, height=600');
+
+            // if I am doing something like below, the beforeupload event listener will not work, why?
+            // var r = confirm('Are you sure to go to the Google website?');
+            // if (r == true) {
+            //     window.open(window.open('https://www.google.com/', 'new_window', 'width=800, height=600'));
+            // }
+        }
+    </script>
+
+</body>
+
+</html>

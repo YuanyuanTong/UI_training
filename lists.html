@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <ol type="i">
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Guava</li>
+    </ol>
+    <ul style="list-style: square;">
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>
+            <ol>
+                <li>Pepsi</li>
+                <li>Coke</li>
+                <li>Sprite</li>
+            </ol>
+        </li>
+        <li>Guava</li>
+    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Department</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Rose</td>
+                <td rowspan="3">Sales</td>
+                <td>john@gmail.com</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Rose</td>
+                <td>john@gmail.com</td>
+            </tr>
+            <tr>
+                <td colspan="2">John</td>
+                <td>john@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <form>
+        <label for="first">FIRST NAME</label>
+        <input type="text" id="first" required placeholder="CAPS">
+        <br>
+        <label for="em">Email</label>
+        <input id="em" type="email" required>
+        <hr>
+        <button type="submit">CLICK</button>
+    </form>
+
+</body>
+
+</html>
