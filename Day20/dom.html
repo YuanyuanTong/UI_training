@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="dom.js"></script>
+    <style>
+        .test{
+            color: red;
+        }
+        .a{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer" style="font-weight: bold;">
+        This is the outer div.
+        <div id="inner">
+            > This is the inner div.
+        </div>
+        <div id="to-remove">
+            > This is the inner div - to be removed.
+        </div>
+    </div>
+    <div id="buttons">
+        <button onclick="myFunc1()">add element before inner div</button>
+        <br>
+        <button onclick="myFunc2()">change text content of inner div</button>
+        <br>
+        <button onclick="myFunc3()">use innerHTML to add element</button>
+        <br>
+        <button onclick="myFunc4()">append and prepend</button>
+        <br>
+        <button onclick="myFunc5()">replace and remove</button>
+        <br>
+        <button onclick="myFunc6()">clone the inner node</button>
+        <br>
+        <button onclick="myFunc7()">change attributes, styles, and classes</button>
+        <br>
+    </div>        
+    
+</body>
+</html>
